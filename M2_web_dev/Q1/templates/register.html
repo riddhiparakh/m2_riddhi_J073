@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %} 
+
+<form method="POST",action="",form style="margin:550px; width: 315px;">
+  <h2>SIGN IN </h2>
+  {% csrf_token %}
+ {{form.username.label}}
+  {{form.username }}
+</br>
+</br>
+
+
+  {{form.email.label}}
+  {{form.email }}
+</br>
+</br>
+  {{form.password1.label}}
+  {{form.password1 }}
+</br>
+</br>
+  {{form.password2.label}}
+  {{form.password2 }}
+
+</br>
+</br>
+  <input type='submit' name=" Create user">
+</form>
+
+{% endblock %}
